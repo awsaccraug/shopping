@@ -1,0 +1,77 @@
+# USR
+
+# CEATE NEW USER
+POST http://localhost:8080/sportscarshop/api/auth/newuser
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "user5@gmail.com",
+  "password": "user5@gmail.com"
+}
+
+###
+
+# CEATE NEW ACCOUNT
+POST http://localhost:8080/sportscarshop/api/auth/create
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "user4@gmail.com",
+  "password": "user4@gmail.com",
+  "role": "admin"
+}
+
+###
+
+# LOGIN code:200
+POST http://localhost:8080/sportscarshop/api/auth/login
+Content-Type: application/json
+Accept: application/json
+#Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJ1c2VyTmFtZSI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiZXhwIjoxNTU2Njg4OTc1fQ.XJzf1VUhMl7VypSFfrhudOGLJGTtqyR5mHCS746DMWQ
+
+{
+  "password": "admin@gmail.com",
+  "username": "admin@gmail.com"
+}
+
+###
+
+# LOGIN code:401
+POST http://localhost:8080/sportscarshop/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "password": "-user@gmail.com",
+  "username": "user@gmail.com"
+}
+
+###
+
+# LOGIN code:401
+POST http://localhost:8080/sportscarshop/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "password": "user@gmail.com",
+  "username": "-user@gmail.com"
+}
+
+###
+
+# LOGOUT code:200
+POST http://localhost:8080/sportscarshop/api/auth/logout
+Content-Type: application/json
+Accept: application/json
+
+###
+
+# GENKEY/256
+GET http://localhost:8080/sportscarshop/api/auth/genkey/256
+Content-Type: application/json
+Accept: application/json
+
+###
