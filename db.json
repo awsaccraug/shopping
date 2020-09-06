@@ -66,9 +66,14 @@
             "Properties": {
                 "GroupDescription": "Ingress for Amazon EC2 security group",
                 "SecurityGroupIngress": [
-                    {
+                   {
+                        "IpProtocol": "tcp",
+                        "FromPort" : "3306",
+                        "ToPort" : "3306",
+                        "SourceSecurityGroupName": "awseb-e-txpnkac6cd-stack-AWSEBSecurityGroup-1JHMOP9OWDMG4"
+                    },
 			    {"IpProtocol" : "tcp", "FromPort" : "3306", "ToPort" : "3306", "CidrIp" : "0.0.0.0/0"}
-                ]
+       ]
             }
         },
         "MyDB": {
