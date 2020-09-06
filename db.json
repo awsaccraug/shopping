@@ -111,14 +111,5 @@
                 "MonitoringRoleArn": "arn:aws:iam::946043019376:role/rds-monitoring-role"
             }
         }
-    },
-    "Outputs" : {
-  	"CarshopDBHostName" : {
-    	"Description" : "Endpoint of Carshop RDS Instance",
-    	"Value" : {"Fn::GetAtt": ["MyDB","Endpoint.Address"]},
-    	"Export" : {
-      		"Name" : { "Ref" : "MyDB" }
-           }
-        }
-     }	
+    }	
 }
