@@ -276,7 +276,7 @@ function login(username, password) {
     }).fail(function () {
         $('#mar-loginModal').modal('hide');
         console.log('NE PRISILOGINTA');
-        alert('Neprisijungta, neteisingi duomenys!');
+        alert('Offline, invalid user!');
     });
 }
 
@@ -307,7 +307,7 @@ function newUser(username, password) {
 
     }).fail(function () {
         $('#mar-loginModal').modal('hide');
-        alert('NE SUKURTAS NEW USER');
+        alert('NEW USER NOT CREATED');
     });
 }
 
@@ -351,7 +351,7 @@ function synchronizeCarts(username) {
         // console.log("User cart=" + userCart);
 
     }).fail(function () {
-        alert("KREPŠELIS NESINCHRONIZUOTAS");
+        alert("CART NOT SYNCHRONIZED");
     });
 }
 
@@ -368,7 +368,7 @@ function keepUserCartInDatabase() {
     }).done(function () {
         console.log("VARTOTOJO KREPŠELIS ISSAUGOTAS DB");
     }).fail(function () {
-        alert("VARTOTOJO KREPŠELIS NE ISSAUGOTAS DB");
+        alert("USER'S CART NOT STORED IN DATABASE");
     });
 }
 
@@ -394,7 +394,7 @@ function buy() {
 
     }).fail(function () {
         console.log('NE APMOKĖTA');
-        alert('NE APMOKĖTA!');
+        alert('NOT PAID!');
     });
 }
 
