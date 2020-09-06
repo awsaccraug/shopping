@@ -13,7 +13,7 @@
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB10Dialect"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql:/carshop.cigavtlippzd.eu-west-1.rds.amazonaws.com:3306/sportscarshop?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+	    <property name="javax.persistence.jdbc.url" value="jdbc:mysql://carshop.cigavtlippzd.eu-west-1.rds.amazonaws.com:3306/sportscarshop?useUnicode=yes&amp;characterEncoding=UTF-8"/>
             <property name="javax.persistence.jdbc.user" value="admin"/>
             <property name="javax.persistence.jdbc.password" value="73Kl8LNDH1xoLJEKVWWO"/>
             <property name="hibernate.format_sql" value="true"/>
