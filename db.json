@@ -111,5 +111,13 @@
                 "MonitoringRoleArn": "arn:aws:iam::946043019376:role/rds-monitoring-role"
             }
         }
+    },
+    "Outputs": {
+        "HostName": {
+            "Description": "InstanceId of the newly created RDS Instance",
+            "Value" : {
+		 "Fn::GetAttr": ["MyDB","Endpoint.Address"]
+	    }
+        }
     }    
 }
