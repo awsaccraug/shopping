@@ -1,7 +1,4 @@
 {
-  "Parameters" : {
-    "KeyName" : "MyDB"
-  },
   "Tags" : {
     "Name" : "AUG DB Stack Template Config"
   },
