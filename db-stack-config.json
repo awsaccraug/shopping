@@ -1,0 +1,18 @@
+{
+  "Parameters" : {
+    "KeyName" : "MyDB"
+  },
+  "Tags" : {
+    "Name" : "AUG DB Stack Template Config"
+  },
+  "StackPolicy" : {
+    "Statement" : [
+      {
+        "Effect" : "Allow",
+        "NotAction" : "Update:*",
+        "Principal": "*",
+        "Resource" : "*"
+      }
+    ]
+  }
+}

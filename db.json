@@ -111,15 +111,5 @@
                 "MonitoringRoleArn": "arn:aws:iam::946043019376:role/rds-monitoring-role"
             }
         }
-    },
-  "StackPolicy" : {
-    "Statement" : [
-      {
-        "Effect" : "Allow",
-        "Action" : "Update:*",
-        "Principal": "*",
-        "Resource" : "*"
-      }
-    ]
-  }    
+    }    
 }
