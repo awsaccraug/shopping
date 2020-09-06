@@ -14,7 +14,7 @@
             "ConstraintDescription": "Must begin with a letter and must not end with a hyphen or contain two consecutive hyphens."
         },
         "DBName": {
-            "Default": "carshop",
+            "Default": "sportscarshop",
             "Description": "My database",
             "Type": "String",
             "MinLength": "1",
@@ -111,5 +111,15 @@
                 "MonitoringRoleArn": "arn:aws:iam::946043019376:role/rds-monitoring-role"
             }
         }
-    }	
+    },
+  "StackPolicy" : {
+    "Statement" : [
+      {
+        "Effect" : "Allow",
+        "Action" : "Update:*",
+        "Principal": "*",
+        "Resource" : "*"
+      }
+    ]
+  }    
 }
