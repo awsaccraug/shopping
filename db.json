@@ -116,7 +116,7 @@
         "HostName": {
             "Description": "InstanceId of the newly created RDS Instance",
             "Value" : {
-		 "Fn::GetAttr": ["MyDB","Endpoint.Address"]
+		 "Fn::GetAtt": ["MyDB","Endpoint.Address"]
 	    }
         }
     }    
