@@ -6,7 +6,7 @@
     "Statement" : [
       {
         "Effect" : "Allow",
-        "NotAction" : "Update:*",
+        "Action" : "Update:*",
         "Principal": "*",
         "Resource" : "*"
       }
