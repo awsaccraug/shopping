@@ -74,9 +74,9 @@ function createSessionCart() {
         method: 'GET',
         dataType: 'json'
     }).done(function () {
-        console.log('SESIJOS KREPSELIS SUKURTAS');
+        console.log('SESSION BASKET CREATED');
     }).fail(function () {
-        console.log('SESIJOS KREPSELIS NE SUKURTAS');
+        console.log('SESSION BASKET FAILED TO CREATE');
     });
 }
 
@@ -99,7 +99,7 @@ function printProducts(skip, rowsPerPage) {
         bildHtmlProductsRows(data, rowsPerPage);
 
     }).fail(function () {
-        console.log("PRODUKTAI NEATSPAUSDINTI");
+        console.log("PRODUCTS NOT PRINTED");
     });
 }
 
@@ -138,10 +138,10 @@ function jamam(productId) {
             qty: 1
         })
     }).done(function () {
-        console.log('PREKE ĮDĖTA Į KREPŠELĮ');
+        console.log('ADDED TO CART');
         printCart();
     }).fail(function () {
-        console.log('PREKE NE ĮDĖTA Į KREPŠELĮ');
+        console.log('ITEMS NOT ADDED TO CART');
     });
 }
 
@@ -154,7 +154,7 @@ function printCart() {
     }).done(function (cart) {
         bildHtmlCartRows(cart);
     }).fail(function () {
-        console.log("CART NEATSPAUSDINTA");
+        console.log("CART NOT PRINTED");
     });
 }
 
@@ -218,10 +218,10 @@ function updateCartLine(productId, oldQty) {
         contentType: 'application/json',
         data: {}
     }).done(function () {
-        console.log("CART LINE ATNAUJINTA");
+        console.log("CART LINE UPDATED");
         printCart();
     }).fail(function () {
-        console.log("CART LINE NE ATNAUJINTA");
+        console.log("CART LINE NOT UPDATED");
     });
 }
 
@@ -234,10 +234,10 @@ function deleteCartLine(productId) {
         dataType: 'json',
         contentType: 'application/json'
     }).done(function () {
-        console.log("CART LINE ISTRINTA");
+        console.log("CART LINE DELETED);
         printCart();
     }).fail(function () {
-        console.log("CART LINE NE ISTRINTA");
+        console.log("CART LINE NOT DELETED");
     });
 }
 
@@ -255,7 +255,7 @@ function login(username, password) {
             password: password
         })
     }).done(function (data) {
-        console.log('PRISILOGINTA');
+        console.log('LOGGED IN');
 
         window.localStorage.token = data.token;
 
@@ -275,8 +275,8 @@ function login(username, password) {
 
     }).fail(function () {
         $('#mar-loginModal').modal('hide');
-        console.log('NE PRISILOGINTA');
-        alert('Offline, invalid user!');
+        console.log('NOT LOGGED IN');
+        alert('Failed to Login, invalid user!');
     });
 }
 
@@ -294,7 +294,7 @@ function newUser(username, password) {
             role: "user"
         })
     }).done(function (data) {
-        console.log('SUKURTAS NEW USER ' + username + '-' + password);
+        console.log('CREATED NEW USER ' + username + '-' + password);
 
         window.localStorage.token = data.token;
 
@@ -321,7 +321,7 @@ function logout() {
         Accept: 'application/json',
         contentType: 'application/json'
     }).done(function () {
-        console.log('IŠSILOGINTA');
+        console.log('LOGGED OUT');
 
         delete window.localStorage.token;
 
@@ -331,7 +331,7 @@ function logout() {
         $('#mar-loggedUserName').text("User: Guest");
 
     }).fail(function () {
-        console.log('NE IŠSILOGINTA')
+        console.log('NOT LOGGED OUT')
     });
 }
 
@@ -347,7 +347,7 @@ function synchronizeCarts(username) {
         headers: {Authorization: "Bearer " + token}
     }).done(function () {
 
-        console.log("GUEST KREPŠELIS SINCHRONIZUOTAS SU:\n " + username);
+        console.log("GUEST CART SYNCHRONISED WITH: " + username);
         // console.log("User cart=" + userCart);
 
     }).fail(function () {
@@ -366,7 +366,7 @@ function keepUserCartInDatabase() {
         dataType: 'json',
         headers: {Authorization: "Bearer " + token}
     }).done(function () {
-        console.log("VARTOTOJO KREPŠELIS ISSAUGOTAS DB");
+        console.log("USER CART STORED IN DATABASE");
     }).fail(function () {
         alert("USER'S CART NOT STORED IN DATABASE");
     });
@@ -388,12 +388,12 @@ function buy() {
             // password: "ok"
         })
     }).done(function (order) {
-        console.log('APMOKĖTA');
+        console.log('PAID');
         console.log('orderLinesSize=' + order.orderLines.length);
         printOrder(order);
 
     }).fail(function () {
-        console.log('NE APMOKĖTA');
+        console.log('NOT PAID');
         alert('NOT PAID!');
     });
 }
@@ -409,10 +409,10 @@ function printOrderList() {
         dataType: 'json',
         headers: {Authorization: "Bearer " + token}
     }).done(function (orderList) {
-        console.log("ORDER LIST ATSPAUSDINTA");
+        console.log("ORDER LIST PRINTED");
         bildHtmlOrderListRows(orderList);
     }).fail(function () {
-        console.log("ORDER LIST NEATSPAUSDINTA");
+        console.log("ORDER LIST NOT PRINTED");
     });
 }
 
@@ -456,10 +456,10 @@ function printOrder(orderId) {
         dataType: 'json',
         headers: {Authorization: "Bearer " + token}
     }).done(function (order) {
-        console.log("ORDER ATSPAUSDINTA");
+        console.log("ORDER PRINTED");
         bildHtmlOrderRows(order);
     }).fail(function () {
-        console.log("ORDER NEATSPAUSDINTA");
+        console.log("ORDER NOT PRINTED");
     });
 }
 
