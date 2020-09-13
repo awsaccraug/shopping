@@ -234,7 +234,7 @@ function deleteCartLine(productId) {
         dataType: 'json',
         contentType: 'application/json'
     }).done(function () {
-        console.log("CART LINE DELETED);
+        console.log("CART LINE DELETED");
         printCart();
     }).fail(function () {
         console.log("CART LINE NOT DELETED");
