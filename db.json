@@ -70,7 +70,7 @@
                         "IpProtocol": "tcp",
                         "FromPort" : "3306",
                         "ToPort" : "3306",
-                        "SourceSecurityGroupName": "awseb-e-i5jtkbgnsh-stack-AWSEBSecurityGroup-1OBZXYTHWLCF4"
+                        "SourceSecurityGroupName": "awseb-e-fmjt4xhaup-stack-AWSEBSecurityGroup-1DVXS41Y4WBKN"
                     }, 
 			    {"IpProtocol" : "tcp", "FromPort" : "3306", "ToPort" : "3306", "CidrIp" : "0.0.0.0/0"}
        ]
