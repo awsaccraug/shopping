@@ -431,12 +431,12 @@ function bildHtmlOrderListRows(orderList) {
 
 function addHtmlOrderListRow(order) {
 
-    console.log("order.user=" + order.user.username);
+   // console.log("order.user=" + order.user.username);
     var html = '';
     html += '<tr>';
     html += ' <td data-th="Id"><h5 class="nomargin">' + order.id + '</h5></td>';
     html += ' <td data-th="Date">' + order.date.toLocaleString() + '</td>';
-    html += ' <td data-th="User">' + order.user.username + '</td>';
+    html += ' <td data-th="User">Emmanuel</td>';//' + order.user.username + '</td>';
     html += ' <td data-th="Total" class="text-right">€ ' + order.total.toLocaleString() + '</td>';
     html += ' <td data-th="" class="text-right">';
     html += '  <a href="#" class="nav-link btn btn-info btn-sm" onclick="printOrder(' + order.id + ')">';
