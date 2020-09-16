@@ -6,14 +6,14 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity(name = "orders")
-@NamedEntityGraph(
+/*@NamedEntityGraph(
         name = Order.GRAPH_ORDER_LINES,
         attributeNodes =
                 { // todo ?? NamedEntityGraph
                         @NamedAttributeNode(value = "user"),
                         @NamedAttributeNode(value = "orderLines")
                 }
-)
+)*/
 public class Order {
 
     public static final String GRAPH_ORDER_LINES = "graph.order.lines";
