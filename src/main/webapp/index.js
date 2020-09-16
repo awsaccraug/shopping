@@ -410,7 +410,7 @@ function printOrderList() {
         headers: {Authorization: "Bearer " + token}
     }).done(function (orderList) {
         console.log("ORDER LIST PRINTED");
-	console.log(orderList.length);
+	console.log(orderList);
         bildHtmlOrderListRows(orderList);
     }).fail(function () {
         console.log("ORDER LIST NOT PRINTED");
