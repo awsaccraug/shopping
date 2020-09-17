@@ -20,19 +20,17 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
+    @Column(nullable = false)
     private int id;
 
     private LocalDate date;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @NotNull
     private User user;
 
     private BigDecimal total;
 
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    @NotNull
     private Set<OrderLine> orderLines;
 
     @Override
