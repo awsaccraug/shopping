@@ -9,11 +9,13 @@ import java.math.BigDecimal;
 public class OrderLine {
 
     @Id
+    @NotNull
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @JsonIgnore
     @ManyToOne
+    @NotNull
     private Order order;
 
     @ManyToOne
