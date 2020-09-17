@@ -9,7 +9,6 @@ import java.math.BigDecimal;
 public class OrderLine {
 
     @Id
-    @Column(nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 

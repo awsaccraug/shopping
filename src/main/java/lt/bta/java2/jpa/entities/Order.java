@@ -20,7 +20,6 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private int id;
 
     private LocalDate date;
