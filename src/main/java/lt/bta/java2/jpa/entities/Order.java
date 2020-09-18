@@ -10,7 +10,7 @@ import java.util.Set;
         name = Order.GRAPH_ORDER_LINES,
         attributeNodes =
                 { // todo ?? NamedEntityGraph
-                        @NamedAttributeNode(value = "users"),
+                        @NamedAttributeNode(value = "user"),
                         @NamedAttributeNode(value = "orderLines")
                 }
 )
