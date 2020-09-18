@@ -7,14 +7,14 @@ import java.util.Set;
 import java.util.HashSet;
 
 @Entity(name = "orders")
-/*@NamedEntityGraph(
+@NamedEntityGraph(
         name = Order.GRAPH_ORDER_LINES,
         attributeNodes =
                 { // todo ?? NamedEntityGraph
                         @NamedAttributeNode(value = "user"),
                         @NamedAttributeNode(value = "orderLines")
                 }
-)*/
+)
 public class Order {
 
     public static final String GRAPH_ORDER_LINES = "graph.order.lines";
