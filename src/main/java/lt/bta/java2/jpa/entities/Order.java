@@ -31,7 +31,6 @@ public class Order {
     private BigDecimal total;
 
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name="order_id", referencedColumnName="id")
     private Set<OrderLine> orderLines;
 
     @Override
