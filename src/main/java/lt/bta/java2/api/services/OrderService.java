@@ -1,5 +1,6 @@
 package lt.bta.java2.api.services;
 
+import lt.bta.java2.jpa.helpers.EntityManagerHelper;
 import lt.bta.java2.api.filters.AccessRoles;
 import lt.bta.java2.api.filters.Role;
 import lt.bta.java2.api.requests.AddCartLineRequest;
@@ -91,20 +92,28 @@ public class OrderService extends BaseService<Order> {
             return Response.ok(order).build();
         }
     }
+@Override
+public Order getOrders() {
+    EntityManager entityManager = EntityManagerHelper.getEntityManager();
+    EntityGraph graph = entityManager.getEntityGraph("graph.order.lines");
+    Map<String, Object> orders = new HashMap<>();
+    orders.put("javax.persistence.fetchgraph", graph);
 
+    return entityManager.find(Order.class, orders);
+}
     // todo ?? NamedEntityGraph
     @AccessRoles({Role.ADMIN})
     @GET
     @Path("/getorderlist")
     public Response getOrderList() {
 
-        try (Dao<Order> orderDao = createDao()) {
-            List<Order> orderList = orderDao.listAll();
+        
+            Map<String, Order> orderList = getOrder();
 
             if (orderList == null) {
                 return Response.status(Response.Status.NOT_FOUND).build();
             }
             return Response.ok(orderList).build();
-        }
+        
     }
 }
