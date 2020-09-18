@@ -1,7 +1,7 @@
 package lt.bta.java2.jpa.entities;
 
 import javax.persistence.*;
-
+import javax.validation.constraints.NotNull;
 /**
  * Vartotojo objektas atitinkantis DB lentele
  */
