@@ -14,9 +14,11 @@ public class OrderLine {
 
     @JsonIgnore
     @ManyToOne
+    @NotNull
     private Order order;
 
     @ManyToOne
+    @NotNull
     private Product product;
 
     private int qty;

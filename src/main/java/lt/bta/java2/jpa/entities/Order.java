@@ -31,7 +31,7 @@ public class Order {
     private BigDecimal total;
 
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<OrderLine> orderLines;
+    private Set<OrderLine> orderLines = new HashSet<OrderLine>();
 
     @Override
     public String toString() {
