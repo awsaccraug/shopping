@@ -98,7 +98,7 @@ public class OrderService extends BaseService<Order> {
     @Path("/getorderlist")
     public Response getOrderList() {
 	  try (Dao<Order> orderDao = createDao()) {
-            List<Order> orderList = orderDao.listAll();
+            List<Order> orderList = orderDao.listAllO();
 
             if (orderList == null) {
                 return Response.status(Response.Status.NOT_FOUND).build();
