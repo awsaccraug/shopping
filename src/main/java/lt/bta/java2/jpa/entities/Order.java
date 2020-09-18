@@ -29,7 +29,7 @@ public class Order {
 
     private BigDecimal total;
 
-    @OneToMany(mappedBy = "orders", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<OrderLine> orderLines;
 
     @Override
