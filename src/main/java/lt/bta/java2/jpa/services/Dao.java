@@ -102,7 +102,9 @@ public class Dao<T> implements AutoCloseable {
         TypedQuery<T> typedQuery = em.createQuery(select);
         return typedQuery.getResultList();
     }
-
+    public List<T> listAllO(){
+    	return em.createQuery("SELECT o FROM orders o JOIN FETCH o.user u JOIN FETCH o.orderLines", Order.class).getResultList();
+    }
     public void close() {
         em.close();
     }
