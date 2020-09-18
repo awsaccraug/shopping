@@ -6,14 +6,14 @@ import java.time.LocalDate;
 import java.util.Set;
 
 @Entity(name = "orders")
-@NamedEntityGraph(
+/*@NamedEntityGraph(
         name = Order.GRAPH_ORDER_LINES,
         attributeNodes =
                 { // todo ?? NamedEntityGraph
                         @NamedAttributeNode(value = "user"),
                         @NamedAttributeNode(value = "orderLines")
                 }
-)
+)*/
 public class Order {
 
     public static final String GRAPH_ORDER_LINES = "graph.order.lines";
@@ -25,11 +25,13 @@ public class Order {
     private LocalDate date;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="user_id", referencedColumnName="id")
     private User user;
 
     private BigDecimal total;
 
     @OneToMany(mappedBy = "order", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name="order_id", referencedColumnName="id")
     private Set<OrderLine> orderLines;
 
     @Override
