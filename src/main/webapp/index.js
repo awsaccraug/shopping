@@ -58,7 +58,7 @@ $(function () {
     });
     // [Sign In - New User button]
     $('#mar-newUserButton').click(function () {
-        newUser($('#username').val(), $('#password').val());
+        newUser($('#reg-username').val(), $('#reg-password').val());
     });
 
     // [Sign Out]
