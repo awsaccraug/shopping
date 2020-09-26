@@ -334,6 +334,7 @@ function logout() {
         $('#mar-adminButton').hide();
         $('#mar-signOutButton').hide();
         $('#mar-signInButton').show();
+	$('#mar-registerButton').show()
         $('#mar-loggedUserName').text("User: Guest");
 
     }).fail(function () {
@@ -397,6 +398,7 @@ function buy() {
         console.log('PAID');
         console.log('orderLinesSize=' + order.orderLines.length);
         printOrder(order);
+	alert('ORDER PAID!');
 
     }).fail(function () {
         console.log('NOT PAID');
