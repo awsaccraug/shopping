@@ -271,7 +271,8 @@ function login(username, password) {
         if (data.role === "admin") {
             $('#mar-adminButton').show();
         }
-
+        
+	$('#mar-registerButton').hide();
         $('#mar-signInButton').hide();
         $('#mar-signOutButton').show();
         $('#mar-loginModal').modal('hide');
@@ -305,6 +306,7 @@ function newUser(username, password) {
         synchronizeCarts(username);
 
         $('#mar-signInButton').hide();
+	$('#mar-registerButton').hide();
         $('#mar-signOutButton').show();
         $('#mar-loginModal').modal('hide');
         $('#mar-loggedUserName').text('New User: ' + username);
