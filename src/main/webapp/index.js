@@ -52,6 +52,10 @@ $(function () {
     $('#mar-loginButton').click(function () {
         login($('#username').val(), $('#password').val());
     });
+    // [Register]
+     $('#mar-registerButton').click(function () {
+        $('#mar-registerModal').modal('show');
+    });
     // [Sign In - New User button]
     $('#mar-newUserButton').click(function () {
         newUser($('#username').val(), $('#password').val());
