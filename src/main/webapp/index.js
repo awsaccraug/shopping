@@ -411,7 +411,7 @@ function buy() {
     }).done(function (order) {
         //console.log('PAID');
         //console.log('orderLinesSize=' + order.orderLines.length);
-        showBuyNotification();
+        //showBuyNotification();
 	printOrder(order);
 	//alert('ORDER PAID!');
         
