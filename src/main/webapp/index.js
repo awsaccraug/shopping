@@ -125,7 +125,7 @@ function bildHtmlProductsRows(products, rowsPerPage) {
         html += ' <td class="text-right">' + products[i].price.toLocaleString() + '</td>';
         html += ' <td class="text-right">';
         html += '  <a href="#" class="nav-link btn btn-info btn-sm" ' +
-            'onclick="jamam(' + products[i].id + ');showCartNotification(' + products[i].name + ')">';
+            'onclick="jamam(' + products[i].id + ','+products[i].name+')">';
         html += '   <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>';
         html += ' </td>';
         html += '</tr>';
@@ -134,7 +134,7 @@ function bildHtmlProductsRows(products, rowsPerPage) {
 }
 
 // CART ----------------------------------------------------------------------------------------------------------------
-function jamam(productId) {
+function jamam(productId,productName) {
 
     var token = window.localStorage.token;
     // dedama į 1 krepseli
@@ -150,6 +150,7 @@ function jamam(productId) {
         })
     }).done(function () {
         console.log('ADDED TO CART');
+	showCartNotification(productName);
         printCart();
     }).fail(function () {
         console.log('ITEMS NOT ADDED TO CART');
