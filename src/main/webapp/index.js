@@ -413,7 +413,7 @@ function buy() {
         //console.log('PAID');
         //console.log('orderLinesSize=' + order.orderLines.length);
         showBuyNotification();
-	printOrder(order);
+//	printOrder(order);
 	//alert('ORDER PAID!');
         
     }).fail(function () {
