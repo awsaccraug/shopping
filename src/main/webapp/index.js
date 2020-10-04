@@ -411,9 +411,10 @@ function buy() {
     }).done(function (order) {
         //console.log('PAID');
         //console.log('orderLinesSize=' + order.orderLines.length);
-        //printOrder(order);
+        showBuyNotification();
+	printOrder(order);
 	//alert('ORDER PAID!');
-
+        
     }).fail(function () {
         console.log('NOT PAID');
         alert('NOT PAID!');
