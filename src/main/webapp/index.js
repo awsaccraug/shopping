@@ -77,13 +77,13 @@ function showCartNotification(productName) {
      productName+ " added to cart", 
     { position:"bottom" }
 );
-function showBuyNotification() {
+/*function showBuyNotification() {
     $("#cart-table").notify(
      "Order paid ",
     { position:"bottom" }
 );
 
-}
+}*/
 function createSessionCart() {
 
     $.ajax({
