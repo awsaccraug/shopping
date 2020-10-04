@@ -77,13 +77,14 @@ function showCartNotification(productName) {
      productName+ " added to cart", 
     { position:"bottom" }
 );
-/*function showBuyNotification() {
+}
+function showBuyNotification() {
     $("#cart-table").notify(
      "Order paid ",
     { position:"bottom" }
 );
 
-}*/
+}
 function createSessionCart() {
 
     $.ajax({
@@ -411,7 +412,7 @@ function buy() {
     }).done(function (order) {
         //console.log('PAID');
         //console.log('orderLinesSize=' + order.orderLines.length);
-        //showBuyNotification();
+        showBuyNotification();
 	printOrder(order);
 	//alert('ORDER PAID!');
         
