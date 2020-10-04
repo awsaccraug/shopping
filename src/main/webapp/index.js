@@ -125,7 +125,7 @@ function bildHtmlProductsRows(products, rowsPerPage) {
         html += ' <td class="text-right">' + products[i].price.toLocaleString() + '</td>';
         html += ' <td class="text-right">';
         html += '  <a href="#" class="nav-link btn btn-info btn-sm" ' +
-            'onclick="jamam(\''+ products[i].id +'\',\''+ products[i].name+'\');" >';
+            'onclick="jamam(\''+ products[i].id +'\',\''+ products[i].name.split(/ (.*)/)[1]+'\');" >';
         html += '   <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>';
         html += ' </td>';
         html += '</tr>';
