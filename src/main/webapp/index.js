@@ -77,6 +77,12 @@ function showCartNotification(productName) {
      productName+ " added to cart", 
     { position:"bottom" }
 );
+function showBuyNotification() {
+    $("#cart-table").notify(
+     "Order paid ",
+    { position:"bottom" }
+);
+
 }
 function createSessionCart() {
 
@@ -403,10 +409,10 @@ function buy() {
             // password: "ok"
         })
     }).done(function (order) {
-        console.log('PAID');
-        console.log('orderLinesSize=' + order.orderLines.length);
-        printOrder(order);
-	alert('ORDER PAID!');
+        //console.log('PAID');
+        //console.log('orderLinesSize=' + order.orderLines.length);
+        //printOrder(order);
+	//alert('ORDER PAID!');
 
     }).fail(function () {
         console.log('NOT PAID');
