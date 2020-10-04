@@ -72,10 +72,10 @@ $(function () {
     // [Add to Cart]
 });
 
-function showCartNotification() {
+function showCartNotification(prodctName) {
     $("#mar-showCart").notify(
-     "I'm to the right of this box", 
-    { position:"right" }
+     productName+" added to cart", 
+    { position:"bottom" }
 );
 }
 function createSessionCart() {
@@ -125,7 +125,7 @@ function bildHtmlProductsRows(products, rowsPerPage) {
         html += ' <td class="text-right">' + products[i].price.toLocaleString() + '</td>';
         html += ' <td class="text-right">';
         html += '  <a href="#" class="nav-link btn btn-info btn-sm" ' +
-            'onclick="jamam(' + products[i].id + ');showCartNotification()">';
+            'onclick="jamam(' + products[i].id + ');showCartNotification('+products[i].name+')">';
         html += '   <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</a>';
         html += ' </td>';
         html += '</tr>';
