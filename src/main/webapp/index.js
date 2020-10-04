@@ -72,9 +72,9 @@ $(function () {
     // [Add to Cart]
 });
 
-function showCartNotification(prodctName) {
+function showCartNotification() {
     $("#mar-showCart").notify(
-     productName+" added to cart", 
+     "tada  added to cart", 
     { position:"bottom" }
 );
 }
