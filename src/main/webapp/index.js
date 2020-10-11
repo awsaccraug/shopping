@@ -81,7 +81,7 @@ function showCartNotification(productName) {
 function showBuyNotification() {
     var total = $('#mar-totalSum').val()
     $("#mar-showCart").notify(
-     "€ "+ total +" paid ",
+     "€ "+  cart.total.toLocaleString()+" paid ",
     { position:"bottom" }
 );
 
