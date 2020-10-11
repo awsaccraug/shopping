@@ -74,14 +74,14 @@ $(function () {
 
 function showCartNotification(productName) {
     $("#mar-showCart").notify(
-     productName+ " added to cart", 
+     productName+ " added to cart", "success",
     { position:"bottom" }
 );
 }
 function showBuyNotification() {
     var total = $('#mar-totalSum').text()
     $("#mar-showCart").notify(
-     "€ "+  total +" paid ",
+     "€ "+  total +" paid ", "success"
     { position:"bottom" }
 );
 
