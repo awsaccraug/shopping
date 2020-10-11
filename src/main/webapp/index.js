@@ -79,8 +79,9 @@ function showCartNotification(productName) {
 );
 }
 function showBuyNotification() {
+    var total = $('#mar-totalSum').val()
     $("#mar-showCart").notify(
-     "Order paid ",
+     "€ "+ total +" paid ",
     { position:"bottom" }
 );
 
