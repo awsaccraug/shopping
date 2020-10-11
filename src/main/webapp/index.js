@@ -79,7 +79,7 @@ function showCartNotification(productName) {
 );
 }
 function showBuyNotification() {
-    $("#cart-table").notify(
+    $("#mar-showCart").notify(
      "Order paid ",
     { position:"bottom" }
 );
